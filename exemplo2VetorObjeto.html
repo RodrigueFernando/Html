@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exempllo-2</title>
+    <script>
+          function exemploArrayObjeto(){
+              let cliente = {
+                  nome:"fernando",
+                  cpf:"123.123.123.-87",
+                  idade:10
+              };
+                let vetorCliente = [];
+                
+
+              let cliente2= {
+                  nome:"Marcelo",
+                  cpf:"333.123.333.-87",
+                  idade:30
+              };
+
+              let cliente3= {
+                  nome:"Angelica",
+                  cpf:"444.123.333.-90",
+                  idade:20
+              };
+              
+                vetorCliente.push(cliente);//inseri  no final
+                vetorCliente.push(cliente2);
+                vetorCliente.push(cliente3);
+
+                vetorCliente[2].idade =14// alterando  o  idade  do  cliente3
+                vetorCliente.pop();//remove o ultimo elemento do array
+                vetorCliente.shift();//remove  o  primeiro elemento
+                vetorCliente.unshift(cliente3); // insere  no  primeiro elemento do vetor
+
+               //vetorCliente.push("Ultimo elemento do vetor inserindo ate agora"); não  recomenda  misturar  tipos ( string, int float...)
+              
+                let str ="";
+                //str += vetorCliente[0].nome + "\n"+ vetorCliente[0].cpf + "\n" + vetorCliente[0].idade + "\n";
+               // str += vetorCliente[1].nome + "\n"+ vetorCliente[1].cpf + "\n" + vetorCliente[1].idade + "\n";
+               // str += vetorCliente[2];
+                let i;
+                for( i=0; i < vetorCliente.length; i++){
+                    str += vetorCliente[i].nome + "\n"+ vetorCliente[i].cpf + "\n" + vetorCliente[i].idade + "\n";
+                }
+                alert(str);
+
+               
+
+        }
+        function exemploSplice(){
+          let frutas =["maça","abacete","péra"]
+            frutas.splice(2,0,"kiwi","cereja");
+            alert(frutas);
+            fruta.splice(3,0)//remove elemento do vetor
+        }
+          
+    </script>
+</head>
+<body>
+     <button onclick="exemploArrayObjeto()">Teste de array Objeto</button>
+     <button onclick="exemploSplice()">Exemplo de splice</button>
+</body>
+</html>

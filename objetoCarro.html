@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+                    //definição dos objetos estudante1 e estudante2:
+		    //os objetos tem as propriedades: id e nome;
+		    //o valor do id do objeto estudante1 é 1
+		    //o valor do nome do objeto estudante1 é "José"
+		    //o valor do id do objeto estudante1 é 2
+		    //o valor do nome do objeto estudante1 é "Maria"
+		    let estudante1 = {id:1,nome:"José"};
+		    let estudante2 = {id:2,nome:"Maria"};
+                    //O código abaixo implementado em JQuery
+		    //define uma ação ready aplicada no documento HTML.
+		    //Esta ação aguarda com que toda a página
+		    //seja carregada para alterar os parágrafos com ids
+		    //id1, nome1,id2 e nome2 com os valores de cada objeto
+		    //estudante1.id: valor do id do objeto estudante1
+		    //estudante1.nome: valor do nome do objeto estudante1
+		    //estudante2.id: valor do id do objeto estudante2
+		    //estudante2.nome: valor do nome do objeto estudante2
+		    $(document).ready(function(){
+			$("#id1").html(estudante1.id);
+			$("#nome1").html(estudante1.nome);
+			$("#id2").html(estudante2.id);
+			$("#nome2").html(estudante2.nome);
+		    });
+		</script>
+	</head> 
+	<body>
+		<h2>Exemplo de uso de objetos em JavaScript</h2>
+		<p id="id1"></p>
+		<p id="nome1"></p>
+		<p id="id2"></p>
+		<p id="nome2"></p>
+	</body>
+</html
+
+
+let receita = {
+    'titulo': 'Bolo de cenoura',
+    'tempoDePreparo': "20 min",
+    'ingredientes': ['3 ovos', '200 g farelo de aveia', '200 g açúcar','10 g de fermento biológico','2 cenouras médias','2/3 de um copo de óleo'],
+    'preparo': ['bata os ovos, o óleo e as cenouras em um liquidificador','misture os demais ingredientes com o que foi batido no liquificador','coloque a massa em uma forma pequena untada com óleo e farinha sem glúten','coloque no formo por aproximadamente 30 min.']
+};
+
+
+
+
+
+
+

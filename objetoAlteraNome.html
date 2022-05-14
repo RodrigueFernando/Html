@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript">
+            //definição dos objetos estudante1 e estudante2:
+            //os objetos tem as propriedades: id e nome;
+            //o valor do id do objeto estudante1 é 1
+            //o valor do nome do objeto estudante1 é "José"
+            //o valor do id do objeto estudante1 é 2
+            //o valor do nome do objeto estudante1 é "Maria"
+            let estudante1 = {id:1,nome:"José"};
+            let estudante2 = {id:2,nome:"Maria"};
+            //O código abaixo implementado em JQuery
+            //define uma ação ready aplicada no documento HTML.
+            //Esta ação aguarda com que toda a página
+            //seja carregada para alterar os parágrafos com ids
+            //id1, nome1, id2 e nome2 com os valores de cada objeto
+            //estudante1.id: valor do id do objeto estudante1
+            //estudante1.nome: valor do nome do objeto estudante1
+            //estudante2.id: valor do id do objeto estudante2
+            //estudante2.nome: valor do nome do objeto estudante2
+            alert("ola");
+            $(document).ready(function(){
+                $("#id1").html("ID do estudante1: "+estudante1.id);
+                $("#nome1").html("Nome do estudante1: "+estudante1.nome);
+                $("#id2").html("ID do estudante1: "+estudante2.id);
+                $("#nome2").html("Nome do estudante2: "+estudante2.nome);
+                //O código abaixo altera o id do objeto estudante2
+                estudante2.id=3;
+                //O código abaixo altera o nome do objeto estudante2
+                estudante2.nome="Maria da Silva";
+                $("#id3").html("ID após a alteração de estudante2: "+estudante2.id);
+                $("#nome3").html("Nome após a alteração de estudante2: "+estudante2.nome);
+            });
+            alert()
+        </script>
+    </head>
+    <body>
+        <h2>Exemplo de uso de objetos em JavaScript</h2>
+        <p id="id1"></p>
+        <p id="nome1"></p>
+        <p id="id2"></p>
+        <p id="nome2"></p>
+        <p id="id3"></p>
+        <p id="nome3"></p>
+    </body>
+</html>
