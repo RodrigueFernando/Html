@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ebr-pr">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Atividade-4</title>
+    <script>
+         let vetorNumero =[4,7,1,90,10];
+         let aux;
+         let ordenado=[];
+         function ordenaVetor(){
+          let j;
+            
+             for(let i=0; i<=vetorNumero.length; i++){
+              for(let j=i+1; j <vetorNumero.length; j++)
+                if(vetorNumero[i] > vetorNumero[j]){
+                     aux =vetorNumero[i];
+                     vetorNumero[i]= vetorNumero[j];
+                     vetorNumero[j]=aux;
+                  
+
+                }
+             
+             }
+             alert(vetorNumero);
+         }
+       
+    </script>
+</head>
+<body>
+       <button onclick= ordenaVetor()>ordena</button>
+</body>
+</html>

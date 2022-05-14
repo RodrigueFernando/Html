@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+	<head>
+    <meta charset="UTF-8">
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+      let lista=[];
+      let str="";
+      let receita = {
+        titulo:"Bolo de cenoura",
+        tempoDePreparo:"20 mim",
+        ingredientes:["3 ovos ","200g farelo de aveia " , "200g açucar " , "10g de fermento biologico ",  " 2 cenouras medias " , "2/3 de um copo de óleo "],
+        preparo:["bata os ovos","o óleo e as cenouras em um liquidificador ", "misture osdemais ingredientes com o quefoi batido no liquificador " , "coloque a massa em uma forma pequena untada com óleo e farinha sem gluten " 
+        , "coloque no formo por aproximatemente 30 mim "]
+     };
+     //alert("titulo:" + receita.titulo +"\n" + "tempo de preparo: " +receita.tempoDePreparo + 
+     //"\n" + "ingredientes: "+ receita.ingredientes + "\n" + "preparo:" + receita.preparo);
+    
+        function minhaReceita(receita){
+         let res = receita.titulo  +  "Tempo" + receita.tempoDePreparo + "ingredientes" +receita.ingredientes + "preparo" + receita.preparo;
+            let text= "ingredientes:<ul>";
+                for(i in receita.ingredientes){
+                    text += "<li>"+ receita.ingredientes[i] + "</li>";
+                }
+              text +="</ul"
+            
+           let imprimir=document.getElementById("p1").innerHTML =text;//não imprimi
+        
+        }
+        
+        alert(text);
+        function preparo(receita){
+          
+        let res = receita.titulo + "<br>" +  "Tempo" + receita.tempoDePreparo + "ingredientes" +receita.ingredientes + "preparo" + receita.preparo;
+         str = "preparo:<ol>"
+        for( i in receita.preparo){
+            str += "<li>"  + receita.preparo[i] +"</li>";
+            str += "<br>";
+        }
+        let x =document.getElementById("p2").innerHTML=str;
+         str+= "</ol>";
+      }
+      minhaReceita(receita)
+      preparo(receita)
+       </script>
+	</head> 
+	<body>
+        <p id="p1"></p>
+        <p id="p2"></p>
+      <button onclick="minhaReceita(receita)">ingredientes</button>
+      <button onclick="preparo(receita)">preparo</button>
+		
+	</body>
+</html>
+
